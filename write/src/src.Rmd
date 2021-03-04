@@ -1,9 +1,9 @@
 ---
 title: "Usar datos para desenterrar tragedias"
-subtitle: "¿Cómo se puede utilizar la ciencia de datos para predecir la existencia de fosas clandestinas en México"
+subtitle: "¿Cómo se puede utilizar la ciencia de datos para predecir la existencia de fosas clandestinas en México?"
 author: |
   Jorge Ruiz - PDH, Universidad Iberoamericana    
-date: "05 de marzo de 2020"
+date: "05 de marzo de 2021"
 output: 
   beamer_presentation:
     colortheme: "whale"
@@ -30,6 +30,16 @@ pacman::p_load(tidyverse, kableExtra, tufte, png, grid, gridExtra, gganimate, he
 
 
 --- 
+
+# Estructura de la presentación 
+
+- Contexto del proyecto 
+
+- ¿Cómo funciona nuestro modelo de predicción de fosas clandestinas? 
+
+- Resultados 
+
+- Pasos a seguir 
 
 # Contexto del proyecto 
 
@@ -63,7 +73,7 @@ Partimos de la premisa de que las fosas que han sido observadas en el país son 
 
 ¿Podemos conocer el universo entero de fosas en México?
 
-No sabemos, pero esto es un pasito más para acercarnos a él. Queremos, a grandes razgos, clasificar nuestros municipios en municipios donde puede haber fosas clandestinas y municipios donde no.
+No sabemos, pero esto es un paso más para acercarnos a él. Queremos, a grandes razgos, clasificar nuestros municipios en municipios donde puede haber fosas clandestinas y municipios donde no.
 
 # ¿Cómo funciona el modelo?
 
@@ -84,7 +94,7 @@ knitr::include_graphics(here("write/input/arbol-decision.png"))
 ```
 
 # ¿Cómo funciona el modelo?
-Bien, pues el un _random forest_ no es más que la combinación de muchos árboles de decisión
+Bien, pues un _random forest_ no es más que la combinación de muchos árboles de decisión
 
 ```{r , echo=FALSE, out.width = '100%', fig.align='center'}
 knitr::include_graphics(here("write/input/random-forest.png"))
@@ -105,7 +115,7 @@ El primer paso, clasificamos los municipios en tres categorías conforme a la va
 
 **0** = municipios donde -dado un análisis de contexto- consideramos poco posible que existan fosas clandestinas.
 
-**-1** = municipios donde no conocemos la respuesta. _Estos son los que nos interesan_.
+**-1** = municipios donde no conocemos la respuesta. **Estos son los que nos interesan**.
 
 # ¿Cómo funciona el modelo?
 El segundo paso es imputar nuestros valores perdidos o nuestros datos incompletos. 
@@ -185,16 +195,25 @@ Se han preparado reportes para la Fiscalía General del Estado de Jalisco y para
 - Trabajar en los _ceros_ del modelo. 
 - Mejorar la desagregación geográfica de las predicciones del modelo. 
 
+
+# Materiales para consultar 
+
+- Data Cívica, PDH Ibero, HRDAG: _Predecir la existencia de fosas clandestinas en municipios mexicanos: Una primera aproximación estadística_: https://datacivica.org/assets/pdf/Fosas_web.pdf
+
+- SCIENCE. _Mapping Mexico´s Hidden graves_: https://www.sciencemag.org/news/2017/06/mapping-mexico-s-hidden-graves
+
+
+- La Lista. _Ciencia de datos para trazar un mapa de la crueldad a la mexicana (I)_: https://la-lista.com/seguridad/2021/01/18/ciencia-de-datos-para-trazar-un-mapa-de-la-crueldad-a-la-mexicana-i
+
+
+- PDH Ibero, Data Cívica (et.al). _Informe sobre la situación de fosas clandestinas en Guanajuato_: https://fosas-guanajuato.datacivica.org/#intro
+
+
 --- 
 
-¡Muchas gracias por su atención!
+¡Muchas gracias por su atención! 
 
-Materiales para consultar: 
-- SCIENCE. Mapping Mexico´s Hidden graves: https://www.sciencemag.org/news/2017/06/mapping-mexico-s-hidden-graves
-- La Lista. Ciencia de datos para trazar un mapa de la crueldad a la mexicana (I) : https://la-lista.com/seguridad/2021/01/18/ciencia-de-datos-para-trazar-un-mapa-de-la-crueldad-a-la-mexicana-i
-- PDH Ibero, Data Cívica (et.al). Informe sobre la situación de fosas clandestinas en Guanajuato: https://fosas-guanajuato.datacivica.org/#intro
-
-Presentación disponible en: https://github.com/oeltonsu/presentacion-fosas-chile.git
+Presentación disponible en: https://github.com/JorgeRuRe/presentacion-fosas-iberoSD.git
 
 * Jorge Ruiz: @jorgerure / jorge.ruiz@ibero.mx
 
