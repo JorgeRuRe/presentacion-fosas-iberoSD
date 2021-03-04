@@ -1,0 +1,2 @@
+"0","notas <- list.files(here(""write/input/""), pattern = ""nota-"", full.names = TRUE)"
+"0","knitr::include_graphics(notas)"

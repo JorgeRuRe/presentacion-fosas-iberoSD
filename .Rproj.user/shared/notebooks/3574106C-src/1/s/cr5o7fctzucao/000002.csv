@@ -1,0 +1,2 @@
+"0","scatters <- list.files(here(""write/input/""), pattern = ""compare-"", full.names = TRUE)"
+"0","knitr::include_graphics(scatters)"
