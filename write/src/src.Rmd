@@ -106,7 +106,7 @@ Datos generales:
 * **2 mil 458 municipios.** 
 * Hasta ahora tenemos datos de fosas 2009 a 2018. Las observaciones vienen de prensa escrita y de fiscalías estatales. 
 * 56 variables predictoras: sociodemográficos, características físicas y topográficas, infraestructura, y algunas cosas de violencia, pero tratamos en realidad de evitarlas.
-* Tenemos en total entonces estimaciones realizadas con 20 modelos: __10__ años * __2__ fuentes. 
+* Tenemos en total estimaciones realizadas con 20 modelos: __10__ años * __2__ fuentes. 
 
 # ¿Cómo funciona el modelo?
 El primer paso, clasificamos los municipios en tres categorías conforme a la variable dependiente (de forma manual): 
